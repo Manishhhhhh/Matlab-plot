@@ -1,0 +1,136 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="C:\Users\m.manish\Desktop\Matlabplot\Freeplot.prj" location="C:\Users\m.manish\Desktop\Matlabplot" name="Freeplot" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>MATLABV3</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>0.1</param.version>
+    <param.authnamewatermark>NATC</param.authnamewatermark>
+    <param.email>moodithaya.manish@nidec.com</param.email>
+    <param.company>Nidec Advance Technology Corporation</param.company>
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.guid />
+    <param.installpath.string>\Nidec Advance Technology Corporation\MATLABV3\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\Freeplot\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\Freeplot\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\Freeplot\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\Freeplot</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>true</param.create.log>
+    <param.log.file>Freeplotlog</param.log.file>
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text>Syntax 
+	  -? 
+	 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 input arguments</param.help.text>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\p2_StandaloneApp.mlapp</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\p2f_plot.m</file>
+      <file>${PROJECT_ROOT}\p2f_scaling.m</file>
+      <file>${PROJECT_ROOT}\p2f_Sdrpdwn.m</file>
+      <file>${PROJECT_ROOT}\p2f_t21switch.m</file>
+      <file>${PROJECT_ROOT}\p2f_Vdrpdwn.m</file>
+      <file>${PROJECT_ROOT}\p3_File1ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file1enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File2ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file2enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File3ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file3enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File4ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file4enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File5ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file5enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File6ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file6enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File7ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file7enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_File8ButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3_file8enableValueChanged.m</file>
+      <file>${PROJECT_ROOT}\p3_getunit.m</file>
+      <file>${PROJECT_ROOT}\p3f_closereq.m</file>
+      <file>${PROJECT_ROOT}\p3f_defaultorder.m</file>
+      <file>${PROJECT_ROOT}\p3f_fileselected.m</file>
+      <file>${PROJECT_ROOT}\p3f_mainclosereq.m</file>
+      <file>${PROJECT_ROOT}\p3f_plot.m</file>
+      <file>${PROJECT_ROOT}\p3f_ReadFileButtonPushed.m</file>
+      <file>${PROJECT_ROOT}\p3f_uicreate.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\Freeplot\for_testing" name="splash.png" optional="false">C:\Users\m.manish\Desktop\Matlabplot\Freeplot\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\Freeplot\for_testing" name="readme.txt" optional="true">C:\Users\m.manish\Desktop\Matlabplot\Freeplot\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\Freeplot\for_testing" name="MATLABV3.exe" optional="false">C:\Users\m.manish\Desktop\Matlabplot\Freeplot\for_testing\MATLABV3.exe</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2021b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
