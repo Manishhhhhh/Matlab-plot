@@ -1,5 +1,11 @@
 function p3f_uicreate(app)
 
+app.p3_UIFigure6 = uifigure;
+app.p3_UIFigure6.Scrollable='on';
+app.p3_UIFigure6.Position=[200 100 1100 450];
+app.p3_UIFigure6.Name="File select";
+app.p3_UIFigure6.CloseRequestFcn = @(src,event)p3f_closereq(src);
+
 app.p3_UIFigure5 = uifigure;
 app.p3_UIFigure5.Scrollable='on';
 app.p3_UIFigure5.Position=[200 100 1100 450];
@@ -24,6 +30,7 @@ app.p3_UIFigure4.Position=[200 100 1100 500];
 app.p3_UIFigure4.Name="Yaxis(right) settings";
 app.p3_UIFigure4.CloseRequestFcn = @(src,event)p3f_closereq(src);
 
+app.p3_UIFigure6.Visible="off";
 app.p3_UIFigure5.Visible="off";
 app.p3_UIFigure2.Visible="off";
 app.p3_UIFigure3.Visible="off";
@@ -1461,5 +1468,77 @@ app.GridLayout2_5.RowHeight = {50, 40, 40, 40, 40, 40, 40, 40, 40};
             app.p3_file8enable.Text = '';
             app.p3_file8enable.Layout.Row = 8;
             app.p3_file8enable.Layout.Column = 1;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            app.p3_CompareFileslectgridlayout = uigridlayout(app.p3_UIFigure6);
+            app.p3_CompareFileslectgridlayout.ColumnWidth = {30, 200, 50, 100, '1x', '1x', '1x'};
+            app.p3_CompareFileslectgridlayout.RowHeight = {40, 40, 40, 40, 40, 40, 40, 40};
+
+            % Create p3_File1Button
+            app.p3_CompareFile1Button = uibutton(app.p3_CompareFileslectgridlayout, 'push');
+            app.p3_CompareFile1Button.ButtonPushedFcn = @(src,evnt)p3_CompareFile1ButtonPushed(app,1);
+            app.p3_CompareFile1Button.Layout.Row = 1;
+            app.p3_CompareFile1Button.Layout.Column = 2;
+            app.p3_CompareFile1Button.Text = 'File1';
+
+            % Create p3_File2Button
+            app.p3_CompareFile2Button = uibutton(app.p3_CompareFileslectgridlayout, 'push');
+            app.p3_CompareFile2Button.ButtonPushedFcn =  @(src,evnt)p3_CompareFile1ButtonPushed(app,2);
+            app.p3_CompareFile2Button.Layout.Row = 2;
+            app.p3_CompareFile2Button.Layout.Column = 2;
+            app.p3_CompareFile2Button.Text = 'File2';
+
+            app.p3_CompareFile9Button = uibutton(app.p3_CompareFileslectgridlayout, 'push');
+            app.p3_CompareFile9Button.ButtonPushedFcn =  @(src,evnt)p3f_compareReadFileButtonPushed(app);
+            app.p3_CompareFile9Button.Layout.Row = 9;
+            app.p3_CompareFile9Button.Layout.Column = 5;
+            app.p3_CompareFile9Button.Text = 'Read file';
+            %%%%%%%%
+            % Create Filename 1 EditFieldLabel
+            app.p3_CompareFilenameEditFieldLabel = uilabel(app.p3_CompareFileslectgridlayout);
+            app.p3_CompareFilenameEditFieldLabel.HorizontalAlignment = 'right';
+            app.p3_CompareFilenameEditFieldLabel.Layout.Row = 1;
+            app.p3_CompareFilenameEditFieldLabel.Layout.Column = 4;
+            app.p3_CompareFilenameEditFieldLabel.Text = 'Filename';
+            
+            % Create p3_Filename1
+            app.p3_CompareFilename1 = uieditfield(app.p3_CompareFileslectgridlayout, 'text');
+            app.p3_CompareFilename1.Layout.Row = 1;
+            app.p3_CompareFilename1.Layout.Column = 5;
+
+            app.p3_CompareFilepath1 = uieditfield(app.p3_CompareFileslectgridlayout, 'text');
+            app.p3_CompareFilepath1.Layout.Row = 1;
+            app.p3_CompareFilepath1.Layout.Column = [6 7];
+
+            %%%%%%%%
+            % Create FilenameEditField_2Label
+            app.p3_CompareFilenameEditField_2Label = uilabel(app.p3_CompareFileslectgridlayout);
+            app.p3_CompareFilenameEditField_2Label.HorizontalAlignment = 'right';
+            app.p3_CompareFilenameEditField_2Label.Layout.Row = 2;
+            app.p3_CompareFilenameEditField_2Label.Layout.Column = 4;
+            app.p3_CompareFilenameEditField_2Label.Text = 'Filename';
+
+            % Create p3_Filename2
+            app.p3_CompareFilename2 = uieditfield(app.p3_CompareFileslectgridlayout, 'text');
+            app.p3_CompareFilename2.Layout.Row = 2;
+            app.p3_CompareFilename2.Layout.Column = 5;
+
+            app.p3_CompareFilepath2 = uieditfield(app.p3_CompareFileslectgridlayout, 'text');
+            app.p3_CompareFilepath2.Layout.Row = 2;
+            app.p3_CompareFilepath2.Layout.Column = [6 7];
+            %%%%%%%%%
+            % Create p3_file1enable
+            app.p3_Comparefile1enable = uicheckbox(app.p3_CompareFileslectgridlayout);
+            app.p3_Comparefile1enable.ValueChangedFcn = @(sr,evnt)p3_comparefile1enableValueChanged(app,1,app.p3_Comparefile1enable.Value);
+            app.p3_Comparefile1enable.Text = '';
+            app.p3_Comparefile1enable.Layout.Row = 1;
+            app.p3_Comparefile1enable.Layout.Column = 1;
+
+            % Create p3_file1e2able
+            app.p3_Comparefile2enable = uicheckbox(app.p3_CompareFileslectgridlayout);
+            app.p3_Comparefile2enable.ValueChangedFcn = @(sr,evnt)p3_comparefile1enableValueChanged(app,2,app.p3_Comparefile2enable.Value);
+            app.p3_Comparefile2enable.Text = '';
+            app.p3_Comparefile2enable.Layout.Row = 2;
+            app.p3_Comparefile2enable.Layout.Column = 1;
 
 end

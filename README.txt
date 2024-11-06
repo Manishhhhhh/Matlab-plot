@@ -1,0 +1,1 @@
+Added compare button to compare 2 different test files
