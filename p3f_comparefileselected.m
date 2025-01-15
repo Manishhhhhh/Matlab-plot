@@ -1,4 +1,6 @@
 function p3f_comparefileselected(app)
+disp(app.p3_file_2);
+disp(app.p3_path_2);
 cla(app.p3_UIAxes,"reset");
 app.p3_data=table;
 app.p3_variables="";

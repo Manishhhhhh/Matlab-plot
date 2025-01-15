@@ -1,1 +1,0 @@
-Brfore removing the settings show/hide option on right click(Since seperate button for show hide was created.).
